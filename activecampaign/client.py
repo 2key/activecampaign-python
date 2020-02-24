@@ -7,6 +7,8 @@ from .lists import Lists
 from .notes import Notes
 from .tasks import Tasks
 from .users import Users
+from .tags import Tags
+from .fields import Fields
 from .webhooks import Webhooks
 
 
@@ -19,6 +21,8 @@ class Client(object):
 
         self.automations = Automations(self)
         self.contacts = Contacts(self)
+        self.tags = Tags(self)
+        self.fields = Fields(self)
         self.deals = Deals(self)
         self.lists = Lists(self)
         self.notes = Notes(self)
